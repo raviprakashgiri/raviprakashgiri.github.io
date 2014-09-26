@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+	<head lang"en-US" dir="ltr">
+		<meta charset="utf-8" />
+		<title>Network Security | SFD-SMVDU</title>
+		<!--Style-->
+		<link rel="stylesheet" href="dependencies/themes/github/css/theme.css">
+		<!-- google analytics async -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3769691-19']);
+  _gaq.push(['_setDomainName', 'github.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<meta name="description" content="Presentation on Network Security under Software Freedom Day.">
+<meta name="author" content="Ravi Prakash Giri">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+	document.write( '<link rel="stylesheet" href="dependencies/revealjs/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+<script src="../dependencies/revealjs/lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--SVG Injection Library-->
+<script src="dependencies/snap-svg/dist/snap.svg-min.js"></script>
+
+<!--GitHub Style-->
+
+	
+
+
+			</head>
+			<body>
+				<div class="reveal" id="reveal">
+	<div class="slides">
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+					
+
+					<section>
+						<h1 class="hidden">Preroll</h1>
+						<h2 class="hidden">Preroll</h2>
+						<div class="clear-all"></div>
+                        <h1>Network Security</h1>
+						
+							
+					<!--		<svg version="1.1"
+								width="100%"
+								height="100%"
+								data-path="assets/logos/logo-github.svg"
+								id="canvas-0-0"
+								preserveAspectRatio="xMidyMid"
+								viewBox="0 0 100 100"></svg>-->
+						
+
+						<hr />
+
+<h1 contenteditable>Basic Concepts & Scope</h1>
+
+
+<div class="pseudoLink" contenteditable>By: Ravi Prakash Giri,CPH</div>
+
+
+<p><aside class="notes"></p>
+
+<ul>
+<li>Ask at any time. Do not wait!</li>
+<li>Share in the conversation.</li>
+</ul>
+
+
+<p></aside></p>
+
+
+					</section>
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+							<section class="cover">
+								<h1>Introduction</h1>
+							</section>
+						
+					
+
+					<section>
+						
+						<div class="clear-all"></div>
+
+						
+							
+								
+							
+						<!--	<svg version="1.1"
+								width="100%"
+								height="100%"
+								data-path="assets/logos/logo-git.svg"
+								id="canvas-1-1"
+								preserveAspectRatio="xMidyMid"
+								viewBox="0 0 100 100"></svg> -->
+                       <h1><strong>What is Network Security ???</strong></h1><br/><br/>
+                        <li>
+                       <!-- <p> Information Security, sometimes shorten to InfoSec, is the practice of defending information from unauthorized access, use, disclosure, disrupption, modification, inspection, recording or destruction. 
+phones.</p> -->
+						<!--<img src="assets/logos/Wikipedia.png" /> -->
+						<p> Network Security consists of the provisions and policies adopted by a network administrator to prevent and monitor unauthorize access, misuse, modification or denial of a computer network and network-accessible resources.</p>
+						
+						
+
+						
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					<section>
+						
+						<div class="clear-all"></div>
+
+						<h1><strong> Some Attacks </strong></h1>
+						<li> <code>1998: Robert Morris,Jr </code> a 23 yr old Cornell graduate student, released a worm that overran Arpanet, incapacitating almost 6000 computers.</li><br/><br/>
+                        <li> <code>1991: David L.Smith</code> 31 yr old created a worm <font color="blue">"Melissa"</font>, causing damage to 1000 computers.</li><br/><br/>
+                        <li> <code>2001: Anna Kournikova </code> virus. Promising photos of the tennis star mailed itself to the every person in the victim's address book.</li><br/><br/>
+                        <li> <code>2008: </code> The headquarters of the Obama and McCain presidential compaigns were hacked.</li>
+								
+							
+				<!--			<svg version="1.1"
+								width="100%"
+								height="100%"
+								data-path="assets/logos/logo-github.svg"
+								id="canvas-1-2"
+								preserveAspectRatio="xMidyMid"
+								viewBox="0 0 100 100"></svg> -->
+						
+
+						
+
+
+					</section>
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						
+						<div class="clear-all"></div>
+
+						<h1><strong> Basic Terminology </strong></h1>
+						<li> <strong>Client</strong> A client is a piece of computer hardware or software that accesses a service made available by a server.</li><br/><br/>
+                        <li> <strong>Server</strong> Server is often ( but not always ) on another computer system in which case client accesses service by way of a network.</li><br/><br/>
+                        <li> <strong>Attacker</strong> It is a term used by some to mean a clever programmer and by others to mean someone who tries to break into computer systems.</li>
+								
+							
+				<!--			<svg version="1.1"
+								width="100%"
+								height="100%"
+								data-path="assets/logos/logo-github.svg"
+								id="canvas-1-2"
+								preserveAspectRatio="xMidyMid"
+								viewBox="0 0 100 100"></svg> -->
+						
+
+						
+
+
+					</section>
+    
+                    
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+							<section class="cover">
+								<h1>Scope:</h1>
+							</section>
+						
+					
+
+					<section>
+						
+						<div class="clear-all"></div>
+
+						<h1>Explore: InfoSec scope:</h1><br/><br/>
+                        <ul>
+                        <li>Ethical Hacker
+                        <ul>
+                        <li>Vulnerability Accessment</li>
+                        <li>Penetration Tester</li>
+                        </ul>
+                        </li>
+                        <br/>
+                        <li>Forensic Investigator</li><br/>
+                        <li>Security Governance
+                        <ul>
+                        <li>Auditor</li>
+                        </ul>
+                        </li><br/>
+                        <li>Security Administrator</li><br/>
+                        <li>Secure Developer</li><br/>
+                        
+                        </ul>
+
+						<!--<div class="sticky">
+    <span><i class="icon-github"> </i></span>
+
+    GitHub Account
+    <a href="https://github.com/signup/free">github.com/signup/free</a>
+</div>-->
+
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						
+						<div class="clear-all"></div>
+                        <h1>What it takes???</h1><br/><br/>
+                        <p><font color="red"><strong>When Interest rules supreme!!!</strong></font></p>
+                        <li><pre><code>You must be a good programmer.</pre></code></li><br/>
+                        <li><pre><code>You must be a good developer.</pre></code></li><br/>
+                        <li><pre><code>You must be a good Tester.</pre></code></li>
+						
+
+						<!--<div class="sticky">
+    <span><i class="icon-cloud-download"> </i></span>
+    Git is easy to install.
+
+    <a href="http://mac.github.com">mac.github.com</a>
+    <a href="http://windows.github.com">windows.github.com</a>
+    <p>sudo apt-get install git</p>
+</div>
+-->
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						<h1>Industry Certifications</h1><br/><br/>
+						<!--<h2 >Git Version</h2>-->
+						<div class="clear-all"></div>
+                        <li>E-C Council                               <br /> 
+                        <ul>
+                        	-CEH, ECSA, CHFI, ECSP and more.
+                        </ul>
+                        </li>
+						<br/>
+						<li>ISC <sup>2</sup>                               <br /> 
+                        <ul>
+                        	-CISSP
+                        </ul>
+                        </li>
+						<br/>
+						<li><font color="green"><strong>Offensive Security</strong></font>  <br /> 
+                        <ul>
+                        	-OSCP, OSWP, OSCE, OSEE, OSWE.
+                        </ul>
+                        </li>
+						<br/>
+                        <br/>
+						<li><font color="blue"><strong>ISACA</strong></font>  <br /> 
+                        <ul>
+                        	-CISA, CISM.
+                        </ul>
+                        </li>
+
+
+					</section>
+                   
+                
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+							<section class="cover">
+								<h1>Recognisation</h1>
+							</section>
+						
+					
+
+					<section>
+						<h3>Bug Bounty and Hall of Fame</h3><br/><br/>
+						<div class="clear-all"></div>
+						<p>A bug bounty program is a deal offered by many website and software developers by which individuals can receive recognition and compensation for reporting bugs, especially those pertaining to exploits and vulnerabilities.</p><br/> 
+                       <p><strong><a href="https://bugcrowd.com/list-of-bug-bounty-programs">Bugcrowd :</a></strong> Vulnerability reporting platform with the largest crowd of security researchers on the planet.</p><br/>
+                       
+						
+					
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						<h1 >Security Contests</h1>
+						
+						<div class="clear-all"></div>
+
+						
+
+						<p>
+							<li><a href="https://csaw.isis.poly.edu/">CSAW</a>: the largest student-run cyber security event.</li><br />
+							<li><a href="http://sharkfest.wireshark.org/">Sharkfest</a>: is an annual 4-day educational conference focused on sharing knowledge and best practices among members of the Wireshark global developer and communities. </li><br />
+							<li><a href="https://www.hackthis.co.uk/levels/">HackThis</a>: the largest student-run cyber security event.</li><br />
+							<li><a href="http://www.pwn2own.com/">Pwn2Own</a>: HP Security Research’s Zero Day Initiative (ZDI) conduct this to join them for the annual Mobile Pwn2Own competition .</li><br />
+							<li><a href="https://www.defcon.org/html/defcon-15/dc-15-contests.html">Defcon Contests</a>: HP Security Research’s Zero Day Initiative (ZDI) conduct this to join them for the annual Mobile Pwn2Own competition .</li><br />
+						</p>
+
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+							<section class="cover">
+								<h1>Resources:</h1>
+							</section>
+						
+					
+
+					<section>
+						<h1 >Web </h1>
+						<h2 >Resources</h2>
+						<div class="clear-all"></div><br/><br/>
+
+						
+
+
+<li>
+	Defcon's list of resources.( https://www.defcon.org/html/links/links-o-rama.html )
+</li><br/>
+	<li>
+	<strong><a href="http://www.securitytube.net/listing?type=latest">Security-Tube :</a></strong> Websites run by Vivek Ramchandran.</li><br/>
+	<li>
+	<strong><a href="http://www.pentesteracademy.com/topics">Penetester Academy :</a></strong> Again a Website run by Vivek Ramchandran.</li><br/>
+		<li>
+	<strong><a href="http://www.exploit-db.com/">Exploit-db :</a></strong> Contains all the list of exploits for the reported bugs.</li><br/>
+	
+                    
+
+
+
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						<!--<h1 >Open source flavours & Tools</h1><br /> -->
+						<p><font color="green">"A fool with a tool is a more dangerous fool..."</font></p>
+						<div class="clear-all"></div><br/>
+						<pre><strong>Linux versions</strong></pre>
+					<ul>
+					<li>Kali Linux.</li><br/>
+                    <li>Backtrack 5 R1,R2,R3.</li>    <br/>
+                    <li>Black Box.</li><br/>
+                    <li>Blackbuntu.</li><br/>
+                    <li>NodeZero.</li><br/>
+                    </ul>
+                    <pre><strong>Frameworks & Tools</strong></pre>
+                    <ul>
+                        <li>Metasploit frameworks.</li><br>
+                        <li> Nmap, Nessus, ettercap, wifite, hydra etc..</li>
+                    </ul>
+					</section>
+
+					<section>
+						<p><strong>Nmap </strong>(Network Mapper) is a security scanner used to discover hosts and services on a computer network, thus creating a "map" of the network.
+</p>
+                        <img src="dependencies/snap-svg/doc/img/nmap.png" />
+
+					</section>
+
+					<section>
+						<p>The <strong>Metasploit </strong>Framework is an advanced open-source platform for 
+developing, testing, and using exploit code. This project initially started off as a portable network game and has evolved into a powerful tool for penetration testing, exploit development, and vulnerability research.
+</p>
+                        <img src="dependencies/snap-svg/doc/img/msfconsole.png" />
+
+					</section>
+
+					<section>
+						<h1 >Conferences & </h1>
+						<h2 >Workshops</h2>
+						<div class="clear-all"></div><br/><br/>
+						
+					<ul>
+					<li><a href="https://www.defcon.org/" >Defcon</a>: Official Defcon conference videos.</li><br/>
+                    <li><a href="https://www.youtube.com/user/bhargavtandel">Bhargav Tandel:</a> This Youtube channel, contains plenty of good videos from beginning level.</li> <br/>
+                    <li><a href="https://www.blackhat.com/us-14/">Black Hat, US: </a> Official Black-Hat conference videos. Event organised every year.</li><br/>
+                    <li><a href="http://nullcon.net/website/">NullCon: </a> Integrated platform for exchanging information on the latest attack vectors, zero day vulnerabilities and unknown threats.</li><br/>
+                   <li><a href="http://is-ra.org/c0c0n/">C0C0N: </a> CyOps Con, is an annual event organized as part of the International Information Security Day.</li><br/>
+                    </ul>
+                    
+                    
+					</section>
+
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			<section class="cover">
+								<h3>Welcome to the real part!!! :)</h3>
+							</section>
+							<section class="cover">
+								<h3>" First, learn computer science and all the theory. Next develop a programming style. Then forget all that and just Hack...!!! "</h3>
+							</section>
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				<section class="cover">
+								<h1>Few concepts</h1>
+							</section>
+					<section>
+						<h1 >Terminology</h1>
+					
+						<div class="clear-all"></div><br/><br/>
+						
+					<ul>
+	                   <li><strong>Exploit</strong>– An exploit is a piece of software, a chunk of data, or
+sequence of commands that take advantage of
+bug, vulnerability in order to cause
+unintended behavior.
+</li><br/>
+<li><strong>Payload</strong>
+– Payload is the data part of the exploit that is
+executed after an exploit is successful.
+
+</li><br/>
+<li><strong>Vulnerability</strong>
+– A weakness which allow an attacker to take advantage of a vulnerable system. 
+</li>
+                    </ul>
+                    
+                    
+					</section>
+
+					 <section>
+						
+                        <img src="dependencies/snap-svg/doc/img/payload.png" />
+
+					</section>
+
+					<section>
+						<h4>TCP 3 way Handshaking</h4>
+						<p>A three-way-handshake is a method used in a TCP/IP network to create a connection between a local host/client and server. It is a three-step method that requires both the client and server to exchange SYN and ACK (acknowledgment) packets before actual data communication begins.
+</p>
+                        <img src="dependencies/snap-svg/doc/img/tcp_crop.jpg"  />
+
+					</section>
+
+
+					<section>
+						<h4>DNS ( Domain Name System )</h4><br />
+						<p>DNS is a hierarchical distributed naming system for computers, services, or any resource connected to the Internet or a private network.
+</p><br />
+                        <img src="dependencies/snap-svg/doc/img/DNS.png"  />
+
+					</section>
+
+					</section>
+
+
+					<section>
+				<section class="cover">
+								<h1>Pentesting</h1>
+							</section>
+					<section>
+						<h1 >Phases of Penetration Testing</h1>
+					
+						<div class="clear-all"></div>
+						
+					<ul>
+	                   <li><strong>Phase 1 - Reconnaissance</strong>– Information gathering:
+<ul>
+<li>finger printing</li>
+<li>foot printing</li>
+<li>Google Hacking</li>
+</ul>
+</li><br/>
+<li><strong>Phase 2 - Networkork Mapping</strong>
+– Payload is the data part of the exploit that is
+executed after an exploit is successful.
+<ul>
+<li>Open Ports</li>
+<li>Open Services</li>
+<li>Vulnerable Services/Applications or Operating systems.</li>
+<li>Weak protection of data in transit.</li>
+</ul>
+</li><br/>
+<li><strong>Phase 3 - Gaining Access</strong>
+
+</li><br/>
+<li><strong>Phase 4 - Exploitation and Post-exploitation</strong>
+
+</li><br/>
+                    </ul>
+                    
+                    
+					</section>
+
+					 
+
+					<section>
+						<h3>Common Attacks</h3>
+						<li><strong>Social Engineering Attack:</strong> Social engineering is a term that describes a non-technical kind of intrusion that relies heavily on human interaction and often involves tricking other people to break normal security procedures.</li><br />
+						<li><strong>Phishing Attack:</strong> Phishing is the attempt to acquire sensitive information such as usernames, passwords, and credit card details by pretending as a trustworthy entity in communication.<strong><font color="green">( Demo )</font></strong></li><br />
+						<li><strong>Spoofing Attack:</strong> A spoofing attack is when a malicious party impersonates another device or user on a network in order to launch attacks against network hosts, steal data, spread malware, or bypass access controls.</li><br />
+						<li><strong>Sniffing Attack:</strong> Packet sniffing allows individuals to capture data as it is transmitted over a network.</li><br />
+
+					</section>
+
+
+					<section>
+						<h3>Common Attacks Continued...</h3><br />
+						<li><strong>Buffer Overflow Attack:</strong> A buffer overflow attack is when the attacker sends more data to an application than is expected. It usually results in the attacker gaining administrative access to the system in a command prompt or shell.</li><br />
+						<li><strong>Denial of Service Attack:</strong> DoS attack designed to cause an interruption or suspension of services of a specific host/server by flooding it with large quantities of useless traffic or external communication requests.<br /><pre><font color="blue"> recall tcp 3 way handshake</font></pre></li><br />
+						
+					</section>
+
+					</section>
+
+		
+				<section>
+					<section class="cover">
+								<h1>Security</h1>
+							</section>
+                   <section>
+                   	<h3>Network Security Techniques</h3><br/> 
+                   		<pre><li>Stricting the rules in Firewalls</pre>
+                   		<ul>It is defined as a software or hardware that allows only those external users with specific characteristics to access a protected network or site.</ul>
+                   		</li><br />
+                   		<pre><li>Implementing IDS ( Intrusion detection system )</li></pre><br />
+                   		<pre><li>Implementing IPS ( Intrusion prevention system )</li></pre>
+                   </section>
+				</section>
+					<!--Capture the slide index value-->
+					
+					<section>
+						
+							<section class="cover">
+								<h1>Case Study</h1>
+							</section>
+						
+					<section>
+						
+						<div class="clear-all"></div><br/><br/>
+						<h3>The Invisible Enemy ( StuxNet Attack )</h3><br /><br />
+						<iframe width="560" height="315" src="//www.youtube.com/embed/mkjmHH2GH2w" frameborder="0" allowfullscreen></iframe>
+
+					</section>
+
+					                   <section>
+                   	<h3>HBGary</h3><br/> 
+                   	<p>HBGary is a subsidiary company of ManTech International, focused on technology security.</p>
+                   		
+                   </section>
+                                    <section>
+                   	<h3>Anonymous</h3><br/> 
+                   <pre>	<li>Anonymous </pre>
+                   	<ul>
+                   		<li>-Ideologically motivated</li>
+                   		<li>-Seeks publicity to humiliate and embarrass targets</li>
+                   		<li>-Not profit driven</li>
+                   	</ul>
+                   </li><br>
+                   	<pre><li>Some high profile attacks:</pre>
+                   		<ul>
+                   		<li>-Amazon, PayPal, MasterCard, Visa attack</li>
+                   		<li>-Sony attacked</li>
+                   	
+                   	</ul>
+                   	</li>
+                   		<div style="position:absolute; width: 318px; height:325px; left:914px;top:214px"><img src="dependencies/snap-svg/doc/img/anonymous.png"  /></div>
+                   </section>
+
+                   <section>
+                   	<h3>HBGary background</h3><br/> 
+                   <pre>	<li>HBGary </pre>
+                   	<ul>
+                   		<li>-CEO Aaron Barr</li>
+                   		<li>-Computer Security company that sells products and services</li>
+                   		
+                   	</ul>
+                   </li><br><br>
+                   	<pre><li><strong><font color="red">Aaron Barr claimed he could unmask Anonymous</font></strong></pre>
+                   		<ul>
+                   		<li>-on the basis of his social media analysys and IRC</li>
+                   		
+                   	
+                   	</ul>
+                   	</li>
+                   		<div style="position:absolute; width: 318px; height:325px; left:914px;top:214px"><img src="dependencies/snap-svg/doc/img/hbg.jpg"  /></div>
+                   </section>
+                   <section>
+                   	<h3>After his claim...</h3>
+                   	<img src="dependencies/snap-svg/doc/img/hbg_anonymous.jpg">
+                   </section>	
+
+                   <section>
+                   	<h3>What happened?</h3><br/> 
+                   <pre>	<li>Within two days </pre>
+                   	<ul>
+                   		<li>-hbgaryfederal.com hacked</li> 
+                   		<li>-rootkit.com hacked</li>
+                   		<li>-40,000 emails stolen</li>
+                   		<li>-Downloaded then deleted 1TB of backup data</li>
+                   		<li>-Hacked Aaron's Barr Twitter & LinkedIn</li>
+                   		<li>-Claimed to have remotely wiped Aaron's Barr iPad</li>
+                   	</ul>
+                   </li><br><br>
+                   	<pre><li>Detailed writeup at:</pre>
+                   		<ul>
+                   		<li><a href="http://arstechnica.com/tech-policy/2011/02/anonymous-speaks-the-inside-story-of-the-hbgary-hack/">-http://arstechnica.com/tech-policy/2011/02/anonymous-speaks-the-inside-story-of-the-hbgary-hack/</a></li>
+                   	
+                   	
+                   	</ul>
+                   	</li>
+                   		<div style="position:absolute; width: 318px; height:325px; left:914px;top:214px"><img src="dependencies/snap-svg/doc/img/anonymous.png"  /></div>
+                   </section>
+
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen1.png" />
+                   	</section>
+
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen2.png" />
+                   	</section>
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen3.png" />
+                   	</section>
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen4.png" />
+                   	</section>
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen5.png" />
+                   	</section>
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen6.png" />
+                   	</section>
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen7.png" />
+                   	</section>
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen8.png" />
+                   	</section>
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen9.png" />
+                   	</section>
+                   	<section>
+                   		<img src="dependencies/snap-svg/doc/img/screen10.png" />
+                   	</section>
+
+					</section>
+
+
+					<!--Chapter Auto-Injection-->
+					<section>
+						
+							<section class="cover">
+								<h1>Demo</h1>
+							</section>
+						
+					
+
+					<section>
+						
+						<div class="clear-all"></div><br/><br/>
+
+						
+
+						</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			
+					
+					
+						
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+					
+
+					<section>
+						<h1 class="hidden"></h1>
+						<h2 class="hidden">Goodbye</h2>
+						<div class="clear-all"></div>
+
+						
+
+						<h3>Thankyou!!!</h3>
+
+
+
+<hr />
+
+<h3>Questions???</h3>
+
+
+
+
+
+
+					</section>
+				
+			</section>
+		
+	</div>
+</div>
+
+				<!---RevealJS--->
+<script src="dependencies/revealjs/lib/js/head.min.js"></script>
+<script src="dependencies/revealjs/js/reveal.js"></script>
+<script>
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: false,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'dependencies/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'dependencies/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'dependencies/revealjs/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+		]
+	});
+
+	// SnapSVG
+	// Run once at startup to inject all SVGs
+	loadAllSvg();
+
+	function loadAllSvg(){
+		var els = document.getElementsByTagName("svg");
+
+		for(var elCount = 0; elCount < els.length; elCount++){
+				injectSvg(els[elCount]);
+		}
+	}
+
+	function injectSvg(canvasTarget){
+		if(canvasTarget){
+			Snap.load(
+				canvasTarget.getAttribute("data-path"),
+				function (frag) {
+					sCanvas = Snap("#" + canvasTarget.getAttribute("id"));
+					fCanvas = Snap();
+					sCanvas.clear();
+
+					//Determine if grouped build-steps present
+					var buildStepBase = frag.select("#base");
+							buildStepGroups = frag.selectAll("[id^=step-]"),
+							buildStepCount = buildStepGroups.length,
+							buildStep = 0;
+
+					//Setup the container canvas boundary sizing
+					setCanvasBBox(frag, canvasTarget);
+
+					// Show the first build step when available
+					// Otherwise just show entire graphic
+					if(buildStepCount > 0){
+						// Include the non-fragment base layout/visuals
+						fCanvas.append(buildStepBase);
+						// fCanvas.append(buildStepGroups[buildStep]);
+
+						for(; buildStep < buildStepCount; buildStep++){
+
+							// Supports fragment in-out transitions by
+							// wrapping in a group and applying a second
+							// fragment class
+							if(buildStepGroups[buildStep].node.id.match(/in-out/)){
+								var tG = fCanvas.g(buildStepGroups[buildStep]);
+								buildStepGroups[buildStep].attr("class", "fragment fade-out");
+								tG.attr("class", "fragment");
+								fCanvas.append(tG);
+							}
+							else{
+								buildStepGroups[buildStep].attr("class", "fragment");
+								fCanvas.append(buildStepGroups[buildStep]);
+							}
+						}
+					} else{
+						//No "steps" to build out, ensure boundary guide
+						//is not rendered
+						frag.select("#boundary").remove();
+						fCanvas.append(frag);
+					}
+
+					sCanvas.append(fCanvas);
+				}
+			);
+		}
+	}
+
+	function setCanvasBBox(canvas, target){
+    var boundary,
+				maxWidth,
+				maxHeight;
+
+    boundary = canvas.select("#boundary").select(":first-child").getBBox();
+		maxWidth = Math.ceil(boundary.width);
+		maxHeight = Math.ceil(boundary.height);
+
+		target.setAttribute("height", (((maxHeight/maxWidth)*100)+"%"));
+    target.setAttribute("viewBox", "0 0 " + maxWidth + " " + maxHeight);
+    return canvas;
+  }
+</script>
+
+<script src="dependencies/plugins/launcher/launcher.js"></script>
+<script src="dependencies/plugins/help/help.js"></script>
+
+			</body>
+
+</html>

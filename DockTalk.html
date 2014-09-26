@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+	<head lang"en-US" dir="ltr">
+		<meta charset="utf-8" />
+		<title>DockTalk | IVR Application</title>
+		<!--Style-->
+		<link rel="stylesheet" href="dependencies/themes/github/css/theme.css">
+		<!-- google analytics async -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3769691-19']);
+  _gaq.push(['_setDomainName', 'github.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<meta name="description" content="Details about the paper on DockTalk.">
+<meta name="author" content="Ravi Prakash Giri">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+	document.write( '<link rel="stylesheet" href="dependencies/revealjs/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+<script src="../dependencies/revealjs/lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--SVG Injection Library-->
+<script src="dependencies/snap-svg/dist/snap.svg-min.js"></script>
+
+<!--GitHub Style-->
+
+	
+
+
+			</head>
+			<body>
+				<div class="reveal" id="reveal">
+	<div class="slides">
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+					
+
+					<section>
+						<h1 class="hidden">Preroll</h1>
+						<h2 class="hidden">Preroll</h2>
+						<div class="clear-all"></div>
+                        <h1>DockTalk : An IVR Application</h1>
+						
+							
+					<!--		<svg version="1.1"
+								width="100%"
+								height="100%"
+								data-path="assets/logos/logo-github.svg"
+								id="canvas-0-0"
+								preserveAspectRatio="xMidyMid"
+								viewBox="0 0 100 100"></svg>-->
+						
+
+						<hr />
+
+<h1 contenteditable>Patient-Doctor Interaction</h1>
+
+
+<div class="pseudoLink" contenteditable>http://www.thedoctalk.com/Default.aspx/</div>
+
+
+<p><aside class="notes"></p>
+
+<ul>
+<li>Ask at any time. Do not wait!</li>
+<li>Share in the conversation</li>
+</ul>
+
+
+<p></aside></p>
+
+
+					</section>
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+							<section class="cover">
+								<h1>Introduction</h1>
+							</section>
+						
+					
+
+					<section>
+						
+						<div class="clear-all"></div>
+
+						
+							
+								
+							
+						<!--	<svg version="1.1"
+								width="100%"
+								height="100%"
+								data-path="assets/logos/logo-git.svg"
+								id="canvas-1-1"
+								preserveAspectRatio="xMidyMid"
+								viewBox="0 0 100 100"></svg> -->
+                       <h1><strong> DocTalk:</strong></h1><br/><br/>
+                        <li>
+                        <p> A system that extends
+doctors’ visits by allowing them to share pre-recorded audio
+messages, in their own voice, to patients with low-end mobile
+phones.</p><br/><br/></li>
+                        <li>Uses a combination of SMS and interactive
+voice response (IVR) to orchestrate this communication between doctors and patients.</ul></li>
+						
+
+						
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						
+						<div class="clear-all"></div>
+
+						<h1><strong>Idea: Awaaz.De</strong></h1>
+						<li>It's a web service that allow user to broadcast audio messages that can be received on the mobile phones of the people of his interest.</li><br/><br/>
+                        <li>User can <font color="green">upload</font> audio on the web or can record there voice by calling to a no. and that can be broadcasted to the mobile phones's of each one he wants.</li><br/><br/>
+                        <li>Each call will be following a message that contain a no. on which that one can call back to listen that message again.  </li>
+								
+							
+				<!--			<svg version="1.1"
+								width="100%"
+								height="100%"
+								data-path="assets/logos/logo-github.svg"
+								id="canvas-1-2"
+								preserveAspectRatio="xMidyMid"
+								viewBox="0 0 100 100"></svg> -->
+						
+
+						
+
+
+					</section>
+    
+                    <section>
+						
+						<div class="clear-all"></div>
+
+						
+								
+							
+							<img src="assets/logos/aawazde.png" />
+						
+
+						
+
+
+					</section>
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+							<section class="cover">
+								<h1>Overview</h1>
+							</section>
+						
+					
+
+					<section>
+						
+						<div class="clear-all"></div>
+
+						<h1>What is the Need of this system?</h1><br/><br/>
+                        <li>Uncommon for doctors to see 100 patients each day. ( specially in rural areas)</li><br/><br/>
+                        <li>Time constraints for detailed instructions.</li><br/><br/>
+                        <li>Unavailability of electronic resources to the rural people like internet etc.</li>
+
+						<!--<div class="sticky">
+    <span><i class="icon-github"> </i></span>
+
+    GitHub Account
+    <a href="https://github.com/signup/free">github.com/signup/free</a>
+</div>-->
+
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						
+						<div class="clear-all"></div>
+                        <h1>Our Goals:</h1><br/><br/>
+                        <li>Our goal is to explore whether mobile
+phones can be used to amplify the eﬀectiveness of doctors’
+time in over-crowded clinics.</li><br/><br/>
+                        <li>Instead of
+doing a live counseling session for each patient, can we record
+a single counseling session – recorded once in compassionate
+and meticulous detail – and make the audio available for all
+subsequent patients?.</li>
+						
+
+						<!--<div class="sticky">
+    <span><i class="icon-cloud-download"> </i></span>
+    Git is easy to install.
+
+    <a href="http://mac.github.com">mac.github.com</a>
+    <a href="http://windows.github.com">windows.github.com</a>
+    <p>sudo apt-get install git</p>
+</div>
+-->
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						<h1>How is it different?</h1><br/><br/>
+						<!--<h2 >Git Version</h2>-->
+						<div class="clear-all"></div>
+                        <li>DockTalk is unique in that as it preserve the personal relationship between doctors and patients.</li>
+						<br/><br/>
+                        <li>Patients are <font color="blue">prescribed</font> a message during there a face to face meeting with the doctor that they can listen on there phone.</li>
+
+
+					</section>
+                    <section>
+						
+                        <img src="dependencies/snap-svg/doc/img/overview.png" />
+
+					</section>
+                
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+							<section class="cover">
+								<h1>Usage Scenario</h1>
+							</section>
+						
+					
+
+					<section>
+						<h4>Doctor want to record message for <strong>fever</strong> patients.</h4><br/><br/>
+						<div class="clear-all"></div>
+                       <p><strong>Step 1:</strong> Sending request string <font color="green">" Record Fever "</font> to the DockTalk. </p><br/>
+                       <p><strong>Step 2:</strong> System respond by calling back to record with tag <strong>Fever</strong>.</p><br/> 
+						<p><strong>Step 3:</strong> For sharing, doctor send message <font color="blue">" Share (tag) (phone no) "</font> sms read to the DockTalk with patient mob no. and tag. </p><br/>
+
+					
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						<h1 >SMS</h1>
+						<h2 >CMD Set</h2>
+						<div class="clear-all"></div>
+
+						
+
+						<p><strong>Recording</strong></p>
+
+<pre><code>RECORD &lt;message id&gt;
+</code></pre>
+
+<p><strong>Sharing</strong> </p>
+
+<pre><code>SHARE &lt;message id&gt; &lt;phone no.&gt;
+</code></pre>
+
+<p><strong>Deleting</strong> Message</p>
+
+<pre><code>DELETE &lt;message id&gt;
+</code></pre>
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						<h1 >In</h1>
+						<h2 >Short</h2>
+						<div class="clear-all"></div><br/></br/>
+
+						
+                        <li>Doctor records a message for the treatment of a disease.</li><br/><br/>
+                        <li>Doctor share the message with the patient having same symptoms.</li><br/><br/>
+                        <li>DockTalk maintain a playlist for the patient, that he can listen in reverse chronological order.</li><br/><br/>
+                        <li>It also send patient a message that his recording is available.</li>
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+							<section class="cover">
+								<h1>Deployment</h1>
+							</section>
+						
+					
+
+					<section>
+						<h1 >Initial</h1>
+						<h2 >Deployment</h2>
+						<div class="clear-all"></div><br/><br/>
+
+						
+
+
+<p>DockTalk was first deployed using a variant of IVR Junction, its an open system that runs on Windows.</p><br/>
+
+
+
+
+<p>It was using <font color="green">Voxeo Prophecy</font> as the IVR engine and <font color="green">Topex Mobilink</font> gsm modem.</p><br/>
+ <p>It was deployed in Mumbai, Bangalore and some other places and was tested with 21 doctors.</p>                       
+
+
+
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						<h1 >Outcomes</h1>
+						
+						<div class="clear-all"></div><br/><br/>
+
+					<li>Initial feedback was good, no. of doctors took interest and adopted.But they didn't want to be the first user.</li><br/>
+                    <li>Due to there demanding schedule, doctors were hesitant to learn the system and record the message.</li>    <br/>
+                    <li>No positive feedback came until they were sure that it'll give value to them.</li>
+                        
+
+					</section>
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+							<section class="cover">
+								<h1>Conclusion</h1>
+							</section>
+						
+					
+
+					<section>
+						
+						<div class="clear-all"></div><br/><br/>
+
+						
+
+						<ul>
+<li>DockTalk IVR system is simple to use, no navigation or button press required.</li><br/><br/>
+<li>The system could also benefit pharmacists, as they can prescribe instructions for taking medications.</li><br/><br/>
+<li>As a future implementation, a smart phone application might make it easier for doctors to record and prescribe messages.</li>
+</ul>
+
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						<h1 >Implementation</h1>
+						<h2 >in our Projects</h2>
+						<div class="clear-all"></div>
+
+						
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					<section>
+						<h1 >Similar Work:</h1>
+						<h2 >Motech Project</h2>
+						<div class="clear-all"></div>
+
+						<p>It is a partnership between the <strong>Ghana Health Service, Grameen Foundation,</strong> and <strong>Columbia University's Mailman School of Public Health</strong></p><br/>
+                        <p>Project uses two interrelated mobile phone applications to increase the quantity and quality of health care.</p><br/>
+                        <p>MOTECH has developed the<strong> ‘Mobile Midwife’</strong> and <strong> ‘Nurse Application’</strong></p><br/>
+                        
+
+
+					</section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+
+					
+				
+			</section>
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			
+					
+					
+						
+		
+			<!--Capture the chapter index value-->
+			
+
+			<!--Nest all chapter's content. Chapters traverse left-right; Sections slide up-down-->
+			<section>
+				
+					<!--Capture the slide index value-->
+					
+
+					<!--Chapter Auto-Injection-->
+					
+						
+					
+
+					<section>
+						<h1 class="hidden"></h1>
+						<h2 class="hidden">Goodbye</h2>
+						<div class="clear-all"></div>
+
+						
+
+						<h3>Thankyou!!!</h3>
+
+
+
+<hr />
+
+<h3>Questions???</h3>
+
+
+
+
+
+
+					</section>
+				
+			</section>
+		
+	</div>
+</div>
+
+				<!---RevealJS--->
+<script src="dependencies/revealjs/lib/js/head.min.js"></script>
+<script src="dependencies/revealjs/js/reveal.js"></script>
+<script>
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: false,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'dependencies/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'dependencies/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'dependencies/revealjs/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+		]
+	});
+
+	// SnapSVG
+	// Run once at startup to inject all SVGs
+	loadAllSvg();
+
+	function loadAllSvg(){
+		var els = document.getElementsByTagName("svg");
+
+		for(var elCount = 0; elCount < els.length; elCount++){
+				injectSvg(els[elCount]);
+		}
+	}
+
+	function injectSvg(canvasTarget){
+		if(canvasTarget){
+			Snap.load(
+				canvasTarget.getAttribute("data-path"),
+				function (frag) {
+					sCanvas = Snap("#" + canvasTarget.getAttribute("id"));
+					fCanvas = Snap();
+					sCanvas.clear();
+
+					//Determine if grouped build-steps present
+					var buildStepBase = frag.select("#base");
+							buildStepGroups = frag.selectAll("[id^=step-]"),
+							buildStepCount = buildStepGroups.length,
+							buildStep = 0;
+
+					//Setup the container canvas boundary sizing
+					setCanvasBBox(frag, canvasTarget);
+
+					// Show the first build step when available
+					// Otherwise just show entire graphic
+					if(buildStepCount > 0){
+						// Include the non-fragment base layout/visuals
+						fCanvas.append(buildStepBase);
+						// fCanvas.append(buildStepGroups[buildStep]);
+
+						for(; buildStep < buildStepCount; buildStep++){
+
+							// Supports fragment in-out transitions by
+							// wrapping in a group and applying a second
+							// fragment class
+							if(buildStepGroups[buildStep].node.id.match(/in-out/)){
+								var tG = fCanvas.g(buildStepGroups[buildStep]);
+								buildStepGroups[buildStep].attr("class", "fragment fade-out");
+								tG.attr("class", "fragment");
+								fCanvas.append(tG);
+							}
+							else{
+								buildStepGroups[buildStep].attr("class", "fragment");
+								fCanvas.append(buildStepGroups[buildStep]);
+							}
+						}
+					} else{
+						//No "steps" to build out, ensure boundary guide
+						//is not rendered
+						frag.select("#boundary").remove();
+						fCanvas.append(frag);
+					}
+
+					sCanvas.append(fCanvas);
+				}
+			);
+		}
+	}
+
+	function setCanvasBBox(canvas, target){
+    var boundary,
+				maxWidth,
+				maxHeight;
+
+    boundary = canvas.select("#boundary").select(":first-child").getBBox();
+		maxWidth = Math.ceil(boundary.width);
+		maxHeight = Math.ceil(boundary.height);
+
+		target.setAttribute("height", (((maxHeight/maxWidth)*100)+"%"));
+    target.setAttribute("viewBox", "0 0 " + maxWidth + " " + maxHeight);
+    return canvas;
+  }
+</script>
+
+<script src="dependencies/plugins/launcher/launcher.js"></script>
+<script src="dependencies/plugins/help/help.js"></script>
+
+			</body>
+
+</html>
