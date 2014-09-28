@@ -28,7 +28,7 @@
       if(seconds){
         services.timer = setTimeout(function(){
           services.showHide();
-        }, seconds*300);
+        }, seconds*1000);
 
         services.refreshCountdown(seconds);
       }
@@ -47,7 +47,7 @@
           if(seconds > 0){
             countdown.innerHTML = "Automatically hiding in " + --seconds;
           }
-        }, 300);
+        }, 1000);
       }
       else{
         clearTimeout(services.timer);
@@ -99,5 +99,5 @@
         "</ul>";
 
     // Display at startup
-    services.showHide(3);
+    services.showHide(10);
 })();
